@@ -1,0 +1,131 @@
+disabled_rules:
+  - inclusive_language
+  - todo
+  - opening_brace
+
+opt_in_rules:
+  - anyobject_protocol
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - contains_over_first_not_nil
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - explicit_init
+  - fallthrough
+  - fatal_error_message
+  - file_header
+  - first_where
+  - identical_operands
+  - implicit_return
+  - implicitly_unwrapped_optional
+  - joined_default_parameter
+  - literal_expression_end_indentation
+  - lower_acl_than_parent
+  - nimble_operator
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - prohibited_interface_builder
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - untyped_error_in_catch
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - yoda_condition
+
+excluded:
+  - SwiftLint/Common/3rdPartyLib
+  - .build
+  - Package.swift
+  - Tests/LinuxMain.swift
+  - Tests/MusicNotationTests/XCTestManifests.swift
+
+analyzer_rules:
+  - capture_variable
+  - unused_declaration
+  - unused_import
+
+line_length:
+  warning: 2000
+  error: 240
+  ignores_function_declarations: true
+  ignores_comments: true
+  ignores_urls: true
+
+function_body_length:
+  warning: 500
+  error: 700
+
+function_parameter_count:
+  warning: 6
+  error: 8
+
+type_body_length:
+  warning: 500
+  error: 800
+
+file_length:
+  warning: 1000
+  error: 1500
+  ignore_comment_only_lines: true
+
+cyclomatic_complexity:
+  warning: 22
+  error: 25
+
+identifier_name:
+  max_length:
+    warning: 60
+    error: 80
+  min_length:
+    error: 3
+  excluded:
+    - up
+    - row
+    - key
+    - id
+    - url
+    - uri
+    - URI
+    - URL
+    - b5
+    - a3
+    - a4
+    - b4
+    - c5
+    - pp
+    - p
+    - mp
+    - mf
+    - f
+    - ff
+
+reporter: "xcode"
+
+file_header:
+  required_pattern: |
+                    \/\/
+                    \/\/\t.*?\.swift
+                    \/\/\t.*?
+                    \/\/
+                    \/\/\tCreated by .*? on \d{4}-\d{2}-\d{2}\.
+                    \/\/\tCopyright © \d{4}(-\d{4})* .*?\. All rights reserved\.
+                    \/\/
